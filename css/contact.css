@@ -1,0 +1,65 @@
+.messageInput {
+    height: 80px; /* Set the initial height */
+    width: 125%; /* Set the width to fill its container */
+    resize: vertical; /* Allow vertical resizing */
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Source Code Pro';
+    font-size: 1.5;
+    color: blue;
+}
+
+/* Disable horizontal resizing */
+.messageInput {
+    max-width: 125%; /* Ensure the textarea doesn't exceed its container's width */
+}
+
+header{
+    margin-right: 50px;
+}
+
+.form-box-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items from the top */
+    border: 2px solid black;
+    padding: 100px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: blue;
+    color: yellow;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px; /* Add margin bottom to create gap between labels */
+    font-size: 2em;
+    text-align: center;
+    width: 100%; /* Set width for labels */
+}
+
+input, textarea {
+    width: 125%;
+    height: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Source Code Pro';
+    font-size: 1.5em;
+    margin-bottom: 15px; /* Add margin bottom to create gap between input fields */
+    color: blue;
+    flex-grow: 1; /* Ensure input fields expand evenly */
+}
+
+.button-contact{
+    width: 125%;
+    height: 50px;
+    color: blue;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: 'Source Code Pro';
+    font-size: 2em;
+    font-weight: bold;
+}

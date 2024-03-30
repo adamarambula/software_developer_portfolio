@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/share.css">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ol>
+                <ul>
+                    <a href='home.html'>Home</a>
+                    <a href='bio.html'>Bio</a>
+                    <a href='projects.html'>Projects</a>
+                </ul>
+            </ol>
+        </header>
+        <h1>Contact Information</h1>
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="form-box-contact">
+                <label for="first_name">First Name</label>
+                <input class="input-style" type="text" id="first_name" required>
+                <label for="last_name">Last Name</label>
+                <input class="input-style" type="text" id="last_name" required>
+                <label for="email">Email</label>
+                <input class="input-style hand-font" type="email" id="email" required>
+                <label for="message">Message</label>
+                <textarea class="messageInput" id="message" required></textarea>
+                <button class="button-contact" type="submit">Submit</button>
+            </div>
+        </form>           
+</body>
+<script>
+const submitForm = (event) => {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    
+    // Get input values
+    let firstName = document.getElementById("first_name").value;
+    let lastName = document.getElementById("last_name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    // Check if all required fields are filled
+    if (firstName && lastName && email && message) {
+        // Display alert
+        alert("Submitted! Adam will reach out to you at his earliest convenience.");
+
+        // Clear input fields
+        document.getElementById("first_name").value = "";
+        document.getElementById("last_name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+    } else {
+        // If any required field is empty, display an alert
+        alert("Please fill out all required fields.");
+    }
+}
+    </script>
+</html>

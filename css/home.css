@@ -1,0 +1,23 @@
+input{
+  height: 20px;
+  border: 2px solid black;
+  scroll-padding-block-start: 3px;
+  text-align: center;
+  font-family: 'Source Code Pro';
+  font-size: 1.5;
+  color: blue;
+}
+
+header{
+  margin-right: 50px;
+}
+
+#image-container{
+  text-align: center;
+  margin-left: 70px;
+}
+
+#bio-container {
+    text-align: center;
+    color: blue;
+}

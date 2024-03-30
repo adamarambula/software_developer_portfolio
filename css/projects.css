@@ -1,0 +1,57 @@
+.form-box-project-one {
+    border: 2px solid black;
+    padding: 50px;
+    text-align: center;
+    background-color: blue;
+    color: yellow;
+    font-size: 1.5em;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.form-box-project-two {
+    border: 2px solid black;
+    padding: 50px;
+    text-align: center;
+    background-color: blue;
+    color: yellow; 
+    font-size: 1.5em;
+    border-radius: 3px; 
+    margin-bottom: 20px; 
+    width: 30%;
+}
+
+.form-box-project-three {
+    border: 2px solid black;
+    padding: 50px;
+    text-align: center;
+    background-color: blue; 
+    color: yellow;
+    font-size: 1.5em;
+    border-radius: 3px;
+    margin-bottom: 20px; 
+    width: 30%;
+}
+
+header{
+    margin-right: 50px;
+}
+
+img {
+    max-width: 50px;
+    height: auto; 
+}
+
+p{
+    margin: 0%;
+    font-size: large;
+}
+
+h2{
+    margin: 0%;
+}
+
+.git{
+    font-size: small;
+}

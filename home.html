@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/share.css">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ol>
+                <ul>
+                    <a href = 'bio.html'>Bio<a>
+                    <a href = 'projects.html'>Projects</a>
+                    <a href = 'contact.html'>Contact</a>
+                </ul>
+            </ol>
+        </header>
+        <h1>Adam Arambula</h1>
+        <div id="image-container">
+            <img id="github-image" src="" alt="GitHub Image">
+        </div>
+        <div id="bio-container">
+            <p id="github-bio"></p>
+        </div>
+        <a href="Adam Arambula's Resume.pdf" download="Adam Arambula's Resume"><button class="btn">Download Resume</button></a>
+    </div>
+</body>
+<script>
+    // Function to make a request to the GitHub API
+    function fetchGitHubImage() {
+        // Make a GET request to the GitHub API
+        fetch('https://api.github.com/users/adamarambula') // Replace USERNAME with the GitHub username
+        .then(response => response.json())
+        .then(data => {
+            // Extract the avatar URL from the response
+            const imageUrl = data.avatar_url;
+
+            // Update the image source attribute
+            const imageElement = document.getElementById('github-image');
+            imageElement.src = imageUrl;
+        })
+        .catch(error => {
+            console.error('Error fetching data from GitHub API:', error);
+        });
+    }
+
+    // Call the function to fetch the GitHub image
+    fetchGitHubImage();
+</script>
+<script>
+    // Function to make a request to the GitHub API
+    function fetchGitHubBio() {
+        // Replace 'USERNAME' with the GitHub username
+        const username = 'adamarambula';
+        // Make a GET request to the GitHub API
+        fetch(`https://api.github.com/users/${username}`)
+        .then(response => response.json())
+        .then(data => {
+            // Extract the bio from the response
+            const bio = data.bio;
+
+            // Update the HTML with the retrieved bio
+            const bioElement = document.getElementById('github-bio');
+            bioElement.textContent = bio;
+        })
+        .catch(error => {
+            console.error('Error fetching data from GitHub API:', error);
+        });
+    }
+
+    // Call the function to fetch the GitHub bio
+    fetchGitHubBio();
+</script>
+</html>
